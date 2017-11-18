@@ -1,7 +1,7 @@
 package com.github.yo7.money;
 
 public class Dollar {
-    public int amount;
+    private int amount;
 
     Dollar(int amount) {
         this.amount = amount;

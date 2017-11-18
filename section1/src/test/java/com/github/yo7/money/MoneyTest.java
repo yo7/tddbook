@@ -15,6 +15,8 @@ public class MoneyTest {
     public void testEquality() {
        assertTrue(new Dollar(5).equals(new Dollar(5)));
        assertFalse(new Dollar(3).equals(new Dollar(5)));
+       assertTrue(new Franc(5).equals(new Franc(5)));
+       assertFalse(new Franc(3).equals(new Franc(5)));
     }
 
     @Test

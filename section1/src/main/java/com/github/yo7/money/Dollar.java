@@ -3,10 +3,10 @@ package com.github.yo7.money;
 public class Dollar extends Money {
     Dollar(int amount, String currency) {
         this.amount = amount;
-        currency = "USD";
+        this.currency = currency;
     }
 
     Money times(int multiplier) {
-        return new Dollar(amount * multiplier, null);
+        return Dollar.dollar(amount * multiplier);
     }
 }

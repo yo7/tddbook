@@ -1,6 +1,6 @@
 package com.github.yo7.money;
 
-abstract class Money {
+class Money {
     protected int amount;
     protected String currency;
 
@@ -13,7 +13,9 @@ abstract class Money {
         return currency;
     }
 
-    abstract Money times(int multiplier);
+    Money times(int multiplier) {
+        return null;
+    };
 
     @Override
     public boolean equals(Object object) {

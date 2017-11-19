@@ -2,10 +2,13 @@ package com.github.yo7.money;
 
 abstract class Money {
     protected int amount;
+    protected String currency;
 
     abstract Money times(int multiplier);
 
-    abstract String currency();
+    String currency() {
+        return currency;
+    }
 
     @Override
     public boolean equals(Object object) {
@@ -15,10 +18,10 @@ abstract class Money {
     }
 
     static Money dollar(int amount) {
-        return new Dollar(amount);
+        return new Dollar(amount, null);
     }
 
     static Money franc(int amount) {
-        return new Franc(amount);
+        return new Franc(amount, null);
     }
 }

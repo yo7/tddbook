@@ -1,19 +1,12 @@
 package com.github.yo7.money;
 
 public class Dollar extends Money {
-    private String currency;
-
-    Dollar(int amount) {
+    Dollar(int amount, String currency) {
         this.amount = amount;
         currency = "USD";
     }
 
-    @Override
-    String currency() {
-        return currency;
-    }
-
     Money times(int multiplier) {
-        return new Dollar(amount * multiplier);
+        return new Dollar(amount * multiplier, null);
     }
 }

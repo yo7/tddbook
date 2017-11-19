@@ -1,7 +1,9 @@
 package com.github.yo7.money;
 
-public class Money {
+abstract class Money {
     protected int amount;
+
+    abstract Money times(int multiplier);
 
     @Override
     public boolean equals(Object object) {
@@ -10,7 +12,7 @@ public class Money {
                     && getClass().equals(money.getClass());
     }
 
-    public static Dollar dollar(int amount) {
+    static Dollar dollar(int amount) {
         return new Dollar(amount);
     }
 }
